@@ -1,0 +1,20 @@
+class Solution
+{
+    public:
+        int countWords(string list[], int n)
+        {
+          map<string,int>c;
+          for(int i=0;i<n;i++){
+          c[list[i]]++;
+          }
+          
+          int count=0;
+          for(auto p:c){
+             if(p.second==2)
+             count++;
+          }
+          
+          return count;
+        }
+
+};
